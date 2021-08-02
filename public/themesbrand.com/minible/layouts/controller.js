@@ -1,5 +1,5 @@
 // Establish a Socket.io connection
-const socket = io('http://localhost:3030');
+const socket = io('http://localhost:80');
 // Initialize our Feathers client application through Socket.io
 // with hooks and authentication.
 const client = feathers();
