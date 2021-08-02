@@ -1,4 +1,4 @@
 {
   "host": "academiapro.herokuapp.com",
-  "port": "80"
+  "port": "PORT"
 }
