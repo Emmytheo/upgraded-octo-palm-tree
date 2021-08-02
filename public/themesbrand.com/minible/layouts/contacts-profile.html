@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+
+    
+<!-- Mirrored from themesbrand.com/minible/layouts/contacts-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 07:24:11 GMT -->
+<head>
+        
+        <meta charset="utf-8" />
+        <title>Profile | Minible - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <style>
+            .card{
+                border-radius: 20px !important;
+                background:  #ffffff !important;
+                box-shadow: 20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff !important;
+                 border: none !important;
+
+
+            }
+        </style>
+
+    </head>
+
+    
+    
+    <body data-layout="horizontal" data-topbar="dark" >
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <!-- <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="20">
+                                </span> -->
+                            </a>
+
+                            <a href="index.html" class="logo logo-light">
+                                <!-- <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="20">
+                                </span> -->
+                                <!-- <center>
+                                    <h4>ACADEMIA PRO</h4>
+                                </center> -->
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                        <!-- App Search-->
+                        <form class="app-search d-none d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="uil-search"></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="d-flex">
+
+                        <div class="dropdown d-inline-block d-lg-none ms-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="uil-search"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                    
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="uil-apps"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                                <div class="px-lg-2">
+                                    
+
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                                <span>Dropbox</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                                <span>Mail Chimp</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img src="assets/images/brands/slack.png" alt="slack">
+                                                <span>Slack</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                <i class="uil-minus-path"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="uil-bell"></i>
+                                <span class="badge bg-danger rounded-pill">1</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5 class="m-0 font-size-16"> Notifications </h5>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small"> Mark all as read</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar style="max-height: 230px;">
+                                    <a href="#" class="text-reset notification-item">
+                                        <div class="d-flex align-items-start">
+                                            <div class="avatar-xs me-3">
+                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="uil-shopping-basket"></i>
+                                                </span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h6 class="mt-0 mb-1">Welcome to Academia PRO</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">Thank you for choosing Academia PRO,...</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                    
+
+                                    
+                                </div>
+                                <div class="p-2 border-top d-grid">
+                                    <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                        <i class="uil-arrow-circle-right me-1"></i> View More..
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar.svg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">FUTO Admin</span>
+                                <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">Meet Your Students</span></a>
+                                <a class="dropdown-item" href="#"><i class="uil uil-wallet font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">My Account</span></a>
+                                <a class="dropdown-item d-block" href="#"><i class="uil uil-cog font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Event Center</span> <span class="badge bg-soft-success rounded-pill mt-1 ms-2">03</span></a>
+                                <a class="dropdown-item" href="#"><i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Lock screen</span></a>
+                                <a class="dropdown-item" href="#"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect">
+                                <i class="uil-cog"></i>
+                            </button>
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="topnav">
+
+                        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+    
+                            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="layouts-hori-topbar-dark.html">
+                                            <i class="uil-home-alt me-2"></i> Dashboard
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button">
+                                            <i class="uil-flask me-2"></i>Student Manager <div class="arrow-down"></div>
+                                        </a>
+
+                                        <div class="dropdown-menu mega-dropdown-menu px-2 dropdown-mega-menu-xl"
+                                            aria-labelledby="topnav-uielement">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div>
+                                                        <a href="ecommerce-products.html" class="dropdown-item">Manage Students</a>
+                                                        <a href="ecommerce-add-product.html" class="dropdown-item">Add Student</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                        </div>
+                                    </li>
+    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
+                                            <i class="uil-apps me-2"></i>Attendance Manager<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-pages">
+
+                                            
+                                            
+                                            <div class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
+                                                    role="button">
+                                                    Examination <div class="arrow-down"></div>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="topnav-email">
+                                                    <a href="contacts-grid.html" class="dropdown-item">Manage Records</a>
+                                                    <a href="ecommerce-add-product2.html" class="dropdown-item">Create New Record</a>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-ecommerce"
+                                                    role="button">
+                                                    Lecture <div class="arrow-down"></div>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="topnav-email">
+                                                    <a href="contacts-grid2.html" class="dropdown-item">Manage Records</a>
+                                                    <a href="ecommerce-add-product2.html" class="dropdown-item">Create New Record</a>
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </li>
+    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                                           >
+                                            <i class="uil-layers me-2"></i>Event Center <div class="arrow-down"></div>
+                                        </a>
+                                        
+                                    </li>
+    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more" role="button"
+                                           >
+                                            <i class="uil-copy me-2"></i>Result Portal<div class="arrow-down"></div>
+                                        </a>
+                                        
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                                           >
+                                            <i class="uil-window-section me-2"></i>Account Settings <div class="arrow-down"></div>
+                                        </a>
+                                        
+                                    </li>
+    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+    
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">Profile</h4>
+
+                                    <div class="mb-0">
+                                        <a href="ecommerce-products.html" class="btn btn-info waves-effect waves-light"><i class="mdi mdi-backspace-outline me-2"></i> Back to Students</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row mb-4">
+                            <div class="col-xl-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <div class="dropdown float-end">
+                                                <a class="text-body dropdown-toggle font-size-18" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                  <i class="uil uil-ellipsis-v"></i>
+                                                </a>
+                                              
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Remove</a>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div>
+                                                <img src="assets/images/users/avatar-4.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail">
+                                            </div>
+                                            <h5 class="mt-3 mb-1">Marcus</h5>
+                                            <p class="text-muted">UI/UX Designer</p>
+
+                                            <div class="mt-4">
+                                                <button type="button" class="btn btn-light btn-sm"><i class="uil uil-envelope-alt me-2"></i> Message</button>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-4">
+
+                                        <div class="text-muted">
+                                            <h5 class="font-size-16">About</h5>
+                                            <p>Hi I'm Marcus,has been the industry's standard dummy text To an English person, it will seem like simplified English, as a skeptical Cambridge.</p>
+                                            <div class="table-responsive mt-4">
+                                                <div>
+                                                    <p class="mb-1">Name :</p>
+                                                    <h5 class="font-size-16">Marcus</h5>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <p class="mb-1">Mobile :</p>
+                                                    <h5 class="font-size-16">012-234-5678</h5>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <p class="mb-1">E-mail :</p>
+                                                    <h5 class="font-size-16">marcus@minible.com</h5>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <p class="mb-1">Location :</p>
+                                                    <h5 class="font-size-16">California, United States</h5>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-8">
+                                <div class="card mb-0">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#about" role="tab">
+                                                <i class="uil uil-user-circle font-size-20"></i>
+                                                <span class="d-none d-sm-block">About</span> 
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#tasks" role="tab">
+                                                <i class="uil uil-clipboard-notes font-size-20"></i>
+                                                <span class="d-none d-sm-block">Tasks</span> 
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#messages" role="tab">
+                                                <i class="uil uil-envelope-alt font-size-20"></i>
+                                                <span class="d-none d-sm-block">Messages</span>   
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- Tab content -->
+                                    <div class="tab-content p-4">
+                                        <div class="tab-pane active" id="about" role="tabpanel">
+                                            <div>
+                                                <div>
+                                                    <h5 class="font-size-16 mb-4">Experience</h5>
+
+                                                    <ul class="activity-feed mb-0 ps-2">
+                                                        <li class="feed-item">
+                                                            <div class="feed-item-list">
+                                                                <p class="text-muted mb-1">2019 - 2020</p>
+                                                                <h5 class="font-size-16">UI/UX Designer</h5>
+                                                                <p>Abc Company</p>
+                                                                <p class="text-muted">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="feed-item">
+                                                            <div class="feed-item-list">
+                                                                <p class="text-muted mb-1">2017 - 2019</p>
+                                                                <h5 class="font-size-16">Graphic Designer</h5>
+                                                                <p>xyz Company</p>
+                                                                <p class="text-muted">It will be as simple as occidental in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div>
+                                                    <h5 class="font-size-16 mb-4">Projects</h5>
+
+                                                    <div class="table-responsive">
+                                                        <table class="table table-nowrap table-hover mb-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">#</th>
+                                                                    <th scope="col">Projects</th>
+                                                                    <th scope="col">Date</th>
+                                                                    <th scope="col">Status</th>
+                                                                    <th scope="col" style="width: 120px;">Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">01</th>
+                                                                    <td><a href="#" class="text-dark">Brand Logo Design</a></td>
+                                                                    <td>
+                                                                        18 Jun, 2020
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="badge bg-soft-primary font-size-12">Open</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                                <i class="uil uil-ellipsis-v"></i>
+                                                                            </a>
+                                                                        
+                                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">02</th>
+                                                                    <td><a href="#" class="text-dark">Minible Admin</a></td>
+                                                                    <td>
+                                                                        06 Jun, 2020
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="badge bg-soft-primary font-size-12">Open</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                                <i class="uil uil-ellipsis-v"></i>
+                                                                            </a>
+                                                                        
+                                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">03</th>
+                                                                    <td><a href="#" class="text-dark">Chat app Design</a></td>
+                                                                    <td>
+                                                                        28 May, 2020
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="badge bg-soft-success font-size-12">Complete</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                                <i class="uil uil-ellipsis-v"></i>
+                                                                            </a>
+                                                                        
+                                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">04</th>
+                                                                    <td><a href="#" class="text-dark">Minible Landing</a></td>
+                                                                    <td>
+                                                                        13 May, 2020
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="badge bg-soft-success font-size-12">Complete</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                                <i class="uil uil-ellipsis-v"></i>
+                                                                            </a>
+                                                                        
+                                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">05</th>
+                                                                    <td><a href="#" class="text-dark">Authentication Pages</a></td>
+                                                                    <td>
+                                                                        06 May, 2020
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="badge bg-soft-success font-size-12">Complete</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                                <i class="uil uil-ellipsis-v"></i>
+                                                                            </a>
+                                                                        
+                                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tasks" role="tabpanel">
+                                            <div>
+                                                <h5 class="font-size-16 mb-3">Active</h5>
+
+                                                <div class="table-responsive">
+                                                    <table class="table table-nowrap table-centered">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width: 60px;">
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-activeCheck2">
+                                                                        <label class="form-check-label" for="tasks-activeCheck2"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Ecommerce Product Detail</a>
+                                                                </td>
+                                                                
+                                                                <td>27 May, 2020</td>
+                                                                <td style="width: 160px;"><span class="badge bg-soft-primary font-size-12">Active</span></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-activeCheck1">
+                                                                        <label class="form-check-label" for="tasks-activeCheck1"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Ecommerce Product</a>
+                                                                </td>
+                                                                
+                                                                <td>26 May, 2020</td>
+                                                                <td><span class="badge bg-soft-primary font-size-12">Active</span></td>
+                                                                
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <h5 class="font-size-16 my-3">Upcoming</h5>
+
+                                                <div class="table-responsive">
+                                                    <table class="table table-nowrap table-centered">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width: 60px;">
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-upcomingCheck3">
+                                                                        <label class="form-check-label" for="tasks-upcomingCheck3"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Chat app Page</a>
+                                                                </td>
+                                                                
+                                                                <td>-</td>
+                                                                <td style="width: 160px;"><span class="badge bg-soft-secondary font-size-12">Waiting</span></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-upcomingCheck2">
+                                                                        <label class="form-check-label" for="tasks-upcomingCheck2"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Email Pages</a>
+                                                                </td>
+                                                                
+                                                                <td>04 June, 2020</td>
+                                                                <td><span class="badge bg-soft-primary font-size-12">Approved</span></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-upcomingCheck1">
+                                                                        <label class="form-check-label" for="tasks-upcomingCheck1"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Contacts Profile Page</a>
+                                                                </td>
+                                                                
+                                                                <td>-</td>
+                                                                <td><span class="badge bg-soft-secondary font-size-12">Waiting</span></td>
+                                                                
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <h5 class="font-size-16 my-3">Complete</h5>
+
+                                                <div class="table-responsive">
+                                                    <table class="table table-nowrap table-centered">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="width: 60px;">
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-completeCheck3">
+                                                                        <label class="form-check-label" for="tasks-completeCheck3"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">UI Elements</a>
+                                                                </td>
+                                                                
+                                                                <td>27 May, 2020</td>
+                                                                <td style="width: 160px;"><span class="badge bg-soft-success font-size-12">Complete</span></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-completeCheck2">
+                                                                        <label class="form-check-label" for="tasks-completeCheck2"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Authentication Pages</a>
+                                                                </td>
+                                                                
+                                                                <td>27 May, 2020</td>
+                                                                <td><span class="badge bg-soft-success font-size-12">Complete</span></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-check font-size-16 text-center">
+                                                                        <input type="checkbox" class="form-check-input" id="tasks-completeCheck1">
+                                                                        <label class="form-check-label" for="tasks-completeCheck1"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#" class="fw-bold text-dark">Admin Layout</a>
+                                                                </td>
+                                                                
+                                                                <td>26 May, 2020</td>
+                                                                <td><span class="badge bg-soft-success font-size-12">Complete</span></td>
+                                                                
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="messages" role="tabpanel">
+                                            <div>
+                                                <div data-simplebar style="max-height: 430px;">
+                                                    <div class="d-flex align-items-start border-bottom py-4">
+                                                        <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-3.jpg" alt="">
+                                                        <div class="flex-1">
+                                                            <h5 class="font-size-15 mt-0 mb-1">Marion Walker <small class="text-muted float-end">1 hr ago</small></h5>
+                                                            <p class="text-muted">If several languages coalesce, the grammar of the resulting .</p>
+            
+                                                            <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i
+                                                                class="mdi mdi-reply"></i> Reply</a>
+            
+                                                            <div class="d-flex align-items-start mt-4">
+                                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-4.jpg" alt="">
+                                                                <div class="flex-1">
+                                                                    <h5 class="font-size-15 mt-0 mb-1">Shanon Marvin <small class="text-muted float-end">1 hr ago</small></h5>
+                                                                    <p class="text-muted">It will be as simple as in fact, it will be Occidental. To it will seem like simplified .</p>
+            
+                                                                    
+                                                                    <a href="javascript: void(0);" class="text-muted font-13 d-inline-block">
+                                                                        <i class="mdi mdi-reply"></i> Reply
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-start border-bottom py-4">
+                                                        <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-5.jpg" alt="">
+                                                        <div class="flex-1">
+                                                            <h5 class="font-size-15 mt-0 mb-1">Janice Morgan <small class="text-muted float-end">2 hrs ago</small></h5>
+                                                            <p class="text-muted">To achieve this, it would be necessary to have uniform pronunciation.</p>
+            
+                                                            <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i
+                                                                class="mdi mdi-reply"></i> Reply</a>
+            
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="d-flex align-items-start border-bottom py-4">
+                                                        <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-7.jpg" alt="">
+                                                        <div class="flex-1">
+                                                            <h5 class="font-size-15 mt-0 mb-1">Patrick Petty <small class="text-muted float-end">3 hrs ago</small></h5>
+                                                            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit </p>
+            
+                                                            <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i
+                                                                class="mdi mdi-reply"></i> Reply</a>
+            
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="border rounded mt-4">
+                                                    <form action="#">
+                                                        <div class="px-2 py-1 bg-light">
+                                                            
+                                                            <div class="btn-group" role="group">
+                                                                <button type="button" class="btn btn-sm btn-link text-dark text-decoration-none"><i class="uil uil-link"></i></button>
+                                                                <button type="button" class="btn btn-sm btn-link text-dark text-decoration-none"><i class="uil uil-smile"></i></button>
+                                                                <button type="button" class="btn btn-sm btn-link text-dark text-decoration-none"><i class="uil uil-at"></i></button>
+                                                              </div>
+                                                            
+                                                        </div>
+                                                        <textarea rows="3" class="form-control border-0 resize-none" placeholder="Your Message..."></textarea>
+                                                        
+                                                    </form>
+                                                </div> <!-- end .border-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © Minible.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://themesbrand.com/" target="_blank" class="text-reset">Themesbrand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div data-simplebar class="h-100">
+
+                <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            
+                    <h5 class="m-0 me-2">Settings</h5>
+
+                    <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                        <i class="mdi mdi-close noti-icon"></i>
+                    </a>
+                </div>
+
+
+
+                <!-- Settings -->
+                <hr class="mt-0" />
+                <h6 class="text-center mb-0">Choose Layouts</h6>
+
+                <div class="p-4">
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked />
+                        <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+                    </div>
+    
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
+                        <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                    </div>
+    
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="form-check form-switch mb-5">
+                        <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                        <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+                    </div>
+
+            
+                </div>
+
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+
+        <!-- Controller -->
+        
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+        <script src="//unpkg.com/@feathersjs/client@^4.5.0/dist/feathers.js"></script>
+        <script src="//unpkg.com/socket.io-client@^2.3.0/dist/socket.io.js"></script>
+        <script src="controller.js"></script>
+
+         
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+    </body>
+
+<!-- Mirrored from themesbrand.com/minible/layouts/contacts-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 07:24:11 GMT -->
+</html>
