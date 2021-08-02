@@ -2,7 +2,7 @@
 
 
 
-const socket = io('http://' + window.location.host + ':80');
+const socket = io();
 // Initialize our Feathers client application through Socket.io
 // with hooks and authentication.
 const client = feathers();
