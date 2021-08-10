@@ -848,7 +848,7 @@ var student = function(id){
 
 var deletecard = function(type, id){
     switch(type){
-        case 'students' = {
+      case 'students' : {
           if(typeof(id) == String){
             client.service('students').get(id).then(st => {
               client.service('students').remove(st[0]._id).then(ans => {
@@ -874,7 +874,7 @@ var deletecard = function(type, id){
           }
           break;
         }
-        case 'lectures' = {
+      case 'lectures' : {
           client.service('lectures').get(id).then( lc => {
             alert(lc[0].lecture + " By " + lc[0].lecturer + " Removed");
             client.service('lectures').remove(id).then( k => {
@@ -886,7 +886,7 @@ var deletecard = function(type, id){
           });
           break;
         }
-        case 'exams' = {
+      case 'exams' : {
           client.service('exams').get(id).then( ex => {
             alert(ex[0].exam + " By " + ex[0].lecturer + " Removed");
             client.service('exams').remove(id)..then( k => {
