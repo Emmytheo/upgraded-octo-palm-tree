@@ -204,6 +204,7 @@ addEventListener('#addstudent', 'click', async () => {
 
     if(check){
         res = await client.service('students').create(stud);
+        alert(res);
         console.log(res);
         
     }
@@ -212,6 +213,8 @@ addEventListener('#addstudent', 'click', async () => {
             if(er == ''){
                 er = null;
             }
+            var t = er + 'is missing'
+            alert(t);
             console.log(er, 'is missing')
         })
     }
@@ -272,10 +275,12 @@ addEventListener('#addlecture', 'click', async () => {
             
             delete stud.lecture;
             res = await client.service('exams').create(stud);
+            alert(res);
             console.log(res);
         }
         else{
             res = await client.service('lectures').create(stud);
+            alert(res);
             console.log(res);
         }
         
@@ -286,6 +291,8 @@ addEventListener('#addlecture', 'click', async () => {
             if(er == ''){
                 er = null;
             }
+            var y = er + 'is missing'
+            alert(y);
             console.log(er, 'is missing')
         })
     }
@@ -547,7 +554,7 @@ var loadcards = function(container, card, data){
                     //col begin
                     html += col.begin;
                     
-
+                    id +=  1;
                     if(data[id].students == undefined){
                         stuu = 0;
                     }
@@ -568,7 +575,7 @@ var loadcards = function(container, card, data){
                     html += card.footer;
                     // col end
                     html += col.end;
-                    id +=  1;
+                    
                 }
                 //row end
                 html += row.end;
@@ -581,9 +588,11 @@ var loadcards = function(container, card, data){
             else{
                 if(data[id].lecture == undefined){
                     res = 'Rendered ' + data.length + ' Exam Records';
+                    alert(res);
                 }
                 else{
                     res = 'Rendered ' + data.length + ' Lecture Records';
+                    alert(res);
                 }
             }
             
@@ -673,6 +682,7 @@ var loadcards = function(container, card, data){
 
 
             res = 'Rendered ' + data.length + ' Attendance Records';
+            alert(res);
 
             break;
         }
@@ -767,7 +777,7 @@ var loadcards = function(container, card, data){
                 for(k = 0; k < rem; k++){
                     //col begin
                     html += col.begin;
-                    
+                    id +=  1;
                     //get student data
                     console.log(data[id]);
                     studentname = data[id].name;
@@ -785,13 +795,14 @@ var loadcards = function(container, card, data){
                     html += card.footer;
                     // col end
                     html += col.end;
-                    id +=  1;
+                    
                 }
                 //row end
                 html += row.end;
             }
             container.innerHTML = html;
             res = 'Rendered ' + data.length + ' Student Records';
+            alert(res);
             
             
             // res = html;
@@ -832,14 +843,7 @@ var student = function(id){
     console.log(id.toString());
     window.sessionStorage.setItem('stuID', id.toString());
 
-    // if(page.indexOf('contacts-grid') !== -1){
-    //     if(page.split('-').includes('grid')){
-    //         window.location.assign('contacts-list.html')
-    //     }
-    //     else if(page.split('-').includes('grid2')){
-    //         window.location.assign('contacts-list2.html')
-    //     }
-    // }
+    
 }
 var clst = [];
 var authenticate = function(){
@@ -930,7 +934,6 @@ var authenticate = function(){
                 if(foundCard.style.display == 'none'){
                     status = 0;
                     window.location.assign(window.location.href);
-                    
                 }
                 break;
             }
