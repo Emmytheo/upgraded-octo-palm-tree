@@ -898,7 +898,7 @@ var deletecard = function(type, id){
           
           break;
         }
-        default = {
+        default : {
           //
           break;
         }
