@@ -889,7 +889,7 @@ var deletecard = function(type, id){
       case 'exams' : {
           client.service('exams').get(id).then( ex => {
             alert(ex[0].exam + " By " + ex[0].lecturer + " Removed");
-            client.service('exams').remove(id)..then( k => {
+            client.service('exams').remove(id).then( k => {
               client.service('exams').find().then(lec => {
                 console.log(loadcards('exams','gridcard', lec));
               });
