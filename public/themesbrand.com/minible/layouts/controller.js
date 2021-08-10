@@ -682,7 +682,7 @@ var loadcards = function(container, card, data){
 
 
             res = 'Rendered ' + data.length + ' Attendance Records';
-            alert(res);
+            
 
             break;
         }
@@ -845,6 +845,67 @@ var student = function(id){
 
     
 }
+
+var delete = function(type, id){
+    switch(type){
+        case 'students' = {
+          if(typeof(id) == String){
+            client.service('students').get(id).then(st => {
+              client.service('students').remove(st[0]._id).then(ans => {
+                 alert("Student " + id + " removed");
+                 client.service('students').find().then(sttt => {
+                    console.log(loadcards('profile','profileCard', sttt))
+                    console.log(sttt.length);
+
+                 })
+              });
+            });
+          }
+          else if(Array.isArray(id)){
+            id.forEach(stude => {
+              stude = stude.toString();
+              client.service('students').get(stude).then(st => {
+                client.service('students').remove(st[0]._id)
+              });
+            });
+            alert("Students " + id + " removed");
+          }
+          else{
+          }
+          break;
+        }
+        case 'lectures' = {
+          client.service('lectures').get(id).then( lc => {
+            alert(lc[0].lecture + " By " + lc[0].lecturer + " Removed");
+            client.service('lectures').remove(id).then( k => {
+              client.service('lectures').find().then(lec => {
+                console.log(loadcards('lectures','gridcard', lec))
+              });
+            });
+            
+          });
+          break;
+        }
+        case 'exams' = {
+          client.service('exams').get(id).then( ex => {
+            alert(ex[0].exam + " By " + ex[0].lecturer + " Removed");
+            client.service('exams').remove(id)..then( k => {
+              client.service('exams').find().then(lec => {
+                console.log(loadcards('exams','gridcard', lec));
+              });
+            });
+          });
+          
+          break;
+        }
+        default = {
+          //
+          break;
+        }
+    }
+
+}
+
 var clst = [];
 var authenticate = function(){
     
