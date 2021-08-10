@@ -476,8 +476,7 @@ var loadcards = function(container, card, data){
                 'end' : `</div>`
             }
             card = {
-                'start' : `<div onclick="lecture('`,
-                'body': `')" class="card text-center">
+                'start' : `<div class="card text-center">
                 <div class="card-body">
                     <div class="dropdown float-end">
                         <a class="text-body dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
@@ -485,9 +484,14 @@ var loadcards = function(container, card, data){
                         </a>
                       
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="contacts-list2.html">Edit</a>
+                            <a class="dropdown-item" href="#" onclick="lecture('`,
+                'body': `')" >Edit</a>
                             <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Remove</a>
+                            <a class="dropdown-item" href="#" onclick="deletecard('`,
+                                
+                                
+                                
+                'body1' : `')" >Remove</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -497,6 +501,7 @@ var loadcards = function(container, card, data){
                     </div>
                     <h5 class="font-size-16 mb-1"><a href="#" class="text-dark">`
                 ,
+
                 'end' :`</a></h5>
                     
                     
@@ -520,6 +525,7 @@ var loadcards = function(container, card, data){
                 html += row.begin;
                 for(j = 1; j <= cols; j++){
                     //col begin
+                    var del = '';
                     html += col.begin;
                     id = (i*cols - (cols - j)) - 1;
                     if(data[id].students == undefined){
@@ -537,6 +543,14 @@ var loadcards = function(container, card, data){
                     html += card.start;
                     html += lectureid;
                     html += card.body;
+                    if(data[id].lecture == undefined){
+                        del = "exams', '" + lectureid;
+                    }
+                    else{
+                        del = "lectures', '" + lectureid;
+                    }
+                    html += del;
+                    html += card.body1;
                     html += lecture;
                     html += card.end;
                     html += stuu;
@@ -554,7 +568,7 @@ var loadcards = function(container, card, data){
                     //col begin
                     html += col.begin;
                     
-                    id +=  1;
+                    
                     if(data[id].students == undefined){
                         stuu = 0;
                     }
@@ -569,12 +583,22 @@ var loadcards = function(container, card, data){
                     html += card.start;
                     html += lectureid;
                     html += card.body;
+                    var del = '';
+                    if(data[id].lecture == undefined){
+                        del = "exams', '" + lectureid;
+                    }
+                    else{
+                        del = "lectures', '" + lectureid;
+                    }
+                    html += del;
+                    html += card.body1;
                     html += lecture;
                     html += card.end;
                     html += stuu;
                     html += card.footer;
                     // col end
                     html += col.end;
+                    id += 1;
                     
                 }
                 //row end
@@ -588,11 +612,11 @@ var loadcards = function(container, card, data){
             else{
                 if(data[id].lecture == undefined){
                     res = 'Rendered ' + data.length + ' Exam Records';
-                    alert(res);
+                    
                 }
                 else{
                     res = 'Rendered ' + data.length + ' Lecture Records';
-                    alert(res);
+                    
                 }
             }
             
@@ -611,7 +635,8 @@ var loadcards = function(container, card, data){
                 'end' : `</tr>`
             };
             head = `<th scope="row"><div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck1"><label class="form-check-label" for="contacusercheck1"></label></div></th>`
-            tail = `<td><ul class="list-inline mb-0"><li class="list-inline-item"><a href="javascript:void(0);" class="px-2 text-primary"><i class="uil uil-pen font-size-18"></i></a></li><li class="list-inline-item"><a href="javascript:void(0);" class="px-2 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a></li><li class="list-inline-item dropdown"><a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div></li></ul></td>`
+            tail = `<td><ul class="list-inline mb-0"><li class="list-inline-item"><a href="javascript:void(0);" class="px-2 text-primary"><i class="uil uil-pen font-size-18"></i></a></li><li class="list-inline-item"><a href="javascript:void(0);" class="px-2 text-danger"><i onclick="deletecard('`
+            tail1 = `')" class="uil uil-trash-alt font-size-18"></i></a></li><li class="list-inline-item dropdown"><a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div></li></ul></td>`
             col = {
                 'begin': `<td>`,
                 'end' : `</td>`
@@ -630,7 +655,7 @@ var loadcards = function(container, card, data){
                     'begin' :  col.begin,
                     'end' : col.end
                 },
-                tail
+                'tail'
             ]
             var cols = 5;
             var id = 0;
@@ -668,7 +693,15 @@ var loadcards = function(container, card, data){
                         html += card[j].end
                     }
                     else{
-                        html += card[j];
+                        if(j == 4){
+                            html += tail;
+                            html += "attendance', '" + data[i].reg;
+                            html += tail1;
+                        }
+                        else{
+                            html += card[j];
+                        }
+                        
                         // console.log('hererrrrrerre')
                     }
                     // col end
@@ -701,16 +734,16 @@ var loadcards = function(container, card, data){
                 'end' : `</div>`
             }
             card = {
-                'start' : `<div class="product-box" onclick="student('`,
-                'body': `')" >
+                'start' : `<div class="product-box" >
                 <div class="product-img pt-4 px-4">
                     <!-- <div class="product-ribbon badge bg-primary">
                         Course Rep
                     </div> -->
                     <h5><div class="product-wishlist">
-                        <a href="contacts-profile.html">
-                            <i class="mdi mdi-menu"></i>
-                        </a>
+                
+                            <i class="mdi mdi-delete" onclick="student('`,
+                'body': ` ')"'></i>
+                        
                     </div></h5>
                     <br>
                     
@@ -742,6 +775,7 @@ var loadcards = function(container, card, data){
             var cols = 3;
             var id = 0;
             var stuu = 0;
+            console.log(data)
             var rows = parseInt(data.length / 3)
             var rem = data.length % 3
             for (i = 1; i <= rows; i++){
@@ -752,6 +786,7 @@ var loadcards = function(container, card, data){
                     html += col.begin;
                     id = (i*cols - (cols - j)) - 1;
                     //get student data
+                    
                     studentname = data[id].name;
                     reg = data[id].reg;
                     lev_sch_dept = data[i].school + ' - ' +  data[i].dept + ' - ' + data[i].level;
@@ -777,7 +812,9 @@ var loadcards = function(container, card, data){
                 for(k = 0; k < rem; k++){
                     //col begin
                     html += col.begin;
-                    id +=  1;
+                    
+                    
+                   
                     //get student data
                     console.log(data[id]);
                     studentname = data[id].name;
@@ -795,6 +832,8 @@ var loadcards = function(container, card, data){
                     html += card.footer;
                     // col end
                     html += col.end;
+                    id += 1;
+
                     
                 }
                 //row end
@@ -802,7 +841,7 @@ var loadcards = function(container, card, data){
             }
             container.innerHTML = html;
             res = 'Rendered ' + data.length + ' Student Records';
-            alert(res);
+            // alert(res);
             
             
             // res = html;
@@ -841,69 +880,133 @@ var lecture = function(id){
 }
 var student = function(id){
     console.log(id.toString());
-    window.sessionStorage.setItem('stuID', id.toString());
+    // window.sessionStorage.setItem('stuID', id.toString());
+    deletecard('students', id.toString());
+
+
+    
+}
+var studentT = function(id){
+    console.log(client.service('students').find());
+    // window.sessionStorage.setItem('stuID', id.toString());
 
     
 }
 
 var deletecard = function(type, id){
-    switch(type){
-      case 'students' : {
-          if(typeof(id) == String){
+    if(type == 'students'){
+        
+        if(typeof(id) == 'string'){
+            console.log(type);
             client.service('students').get(id).then(st => {
-              client.service('students').remove(st[0]._id).then(ans => {
-                 alert("Student " + id + " removed");
-                 client.service('students').find().then(sttt => {
-                    console.log(loadcards('profile','profileCard', sttt))
-                    console.log(sttt.length);
-
-                 })
-              });
+                client.service('students').remove(st[0]._id).then(ans => {
+                    console.log(ans);
+                    
+                    client.service('students').find().then(sttt => {
+                        console.log(loadcards('profile','profileCard', sttt))
+                        console.log(sttt.length);
+                    });
+                });
             });
-          }
-          else if(Array.isArray(id)){
+        }
+        else if(Array.isArray(id)){
             id.forEach(stude => {
-              stude = stude.toString();
-              client.service('students').get(stude).then(st => {
-                client.service('students').remove(st[0]._id)
-              });
+                stude = stude.toString();
+                client.service('students').get(stude).then(st => {
+                    client.service('students').remove(st[0]._id)
+                });
             });
             alert("Students " + id + " removed");
-          }
-          else{
-          }
-          break;
         }
-      case 'lectures' : {
-          client.service('lectures').get(id).then( lc => {
-            alert(lc[0].lecture + " By " + lc[0].lecturer + " Removed");
-            client.service('lectures').remove(id).then( k => {
-              client.service('lectures').find().then(lec => {
-                console.log(loadcards('lectures','gridcard', lec))
-              });
-            });
-            
-          });
-          break;
-        }
-      case 'exams' : {
-          client.service('exams').get(id).then( ex => {
-            alert(ex[0].exam + " By " + ex[0].lecturer + " Removed");
-            client.service('exams').remove(id).then( k => {
-              client.service('exams').find().then(lec => {
-                console.log(loadcards('exams','gridcard', lec));
-              });
-            });
-          });
-          
-          break;
-        }
-        default : {
-          //
-          break;
+        else{
+            console.log(typeof(id));
         }
     }
+    else if(type == 'lectures'){
+        console.log(type);
+        client.service('lectures').get(id).then( lc => {
+            console.log(lc);
+            
+            client.service('lectures').remove(id).then( k => {
+                
+                client.service('lectures').find().then(lec => {
+                    console.log(loadcards('lectures','gridcard', lec))
+                });
+            });
+        });
+    }
+    else if(type == 'exams'){
+        console.log(type);
+        client.service('exams').get(id).then( ex => {
+            
+            client.service('exams').remove(id).then( k => {
+                client.service('exams').find().then(lec => {
+                    console.log(loadcards('exams','gridcard', lec));
+                });
+            });
+        });
+    }
 
+    else if ('attendance'){
+        client.service('students').get(id).then( stu => {
+            if(typeof(stu) == 'object'){
+                if(page.indexOf('contacts-list') !== -1){
+                    if(page.split('-').includes('list')){
+                        client.service('exams').get(lec_id).then( res => {
+                            var restu = res.students;
+                            var constu = [];
+                            restu.push(stu.reg);
+                            [...new Set(restu)].forEach(e=>{constu.push(parseInt(e))});
+                            if(constu.includes(parseInt(id))){
+                                console.log('TRUE', id);
+                                if (constu.indexOf(parseInt(id)) > -1) {
+                                    constu.splice(constu.indexOf(parseInt(id)), 1);
+                                }
+                            }
+                            restu = constu;
+                            console.log(id)
+                            client.service('exams').patch(lec_id, {'students' : restu }).then( re => {
+                                client.service('students').get(restu).then(stud => {
+                                    console.log(loadcards('attendance','AttendanceCard', stud))
+                                })
+                            })
+                        });
+                        
+                    }
+                    else if(page.split('-').includes('list2')){
+                        client.service('lectures').get(lec_id).then( res => {
+                            var restu = res.students;
+                            var constu = [];
+                            restu.push(stu.reg);
+                            [...new Set(restu)].forEach(e=>{constu.push(parseInt(e))});
+                            if(constu.includes(parseInt(id))){
+                                console.log('TRUE', id);
+                                if (constu.indexOf(parseInt(id)) > -1) {
+                                    constu.splice(constu.indexOf(parseInt(id)), 1);
+                                }
+                            }
+                            
+                            restu = constu;
+                            client.service('lectures').patch(lec_id, {'students' : restu }).then( re => {
+                                client.service('students').get(restu).then(stud => {
+                                    console.log(loadcards('attendance','AttendanceCard', stud))
+                                })
+                            })
+                        });
+                        
+                    }
+                }
+                
+                
+                
+            }
+            else{
+                pyt.innerHTML = stu;  
+                console.log(typeof(stu));
+            }
+        })
+    }
+   
 }
 
 var clst = [];

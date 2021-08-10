@@ -74,6 +74,7 @@ exports.Exams = class Exams extends Service {
     return Promise.resolve(response);
   }
   async remove(id, params){
-    return Promise.resolve('Not allowed');
+    var response = await super.remove(id, params);
+    return Promise.resolve(response);
   }
 };

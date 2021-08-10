@@ -1,6 +1,6 @@
 {
   "host": "localhost",
-  "port": 80,
+  "port": 3030,
   "public": "public/themesbrand.com/minible/layouts/",
   "paginate": {
     "default": 10,
@@ -28,6 +28,6 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb+srv://Emmytheo:emmytheo@cluster0.3fumi.mongodb.net/academiapro"
-  // "mongodb": "mongodb://localhost:27017/academiapro"
+  // "mongodb": "mongodb+srv://Emmytheo:emmytheo@cluster0.3fumi.mongodb.net/academiapro"
+  "mongodb": "mongodb://localhost:27017/academiapro"
 }
