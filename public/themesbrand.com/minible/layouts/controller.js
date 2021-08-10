@@ -846,7 +846,7 @@ var student = function(id){
     
 }
 
-var delete = function(type, id){
+var deletecard = function(type, id){
     switch(type){
         case 'students' = {
           if(typeof(id) == String){
