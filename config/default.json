@@ -28,6 +28,6 @@
       "passwordField": "password"
     }
   },
-  // "mongodb": "mongodb+srv://Emmytheo:emmytheo@cluster0.3fumi.mongodb.net/academiapro"
-  "mongodb": "mongodb://localhost:27017/academiapro"
+  "mongodb": "mongodb+srv://Emmytheo:emmytheo@cluster0.3fumi.mongodb.net/academiapro"
+  // "mongodb": "mongodb://localhost:27017/academiapro"
 }
